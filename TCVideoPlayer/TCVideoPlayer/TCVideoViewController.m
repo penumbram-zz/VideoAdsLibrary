@@ -111,17 +111,20 @@
 
 -(void) resumeContentVideo{
     [[self player] replaceCurrentItemWithPlayerItem:[AVPlayerItem playerItemWithURL:[NSURL URLWithString:_videoURL]]];
-    [[[self player] currentItem] seekToTime:[[self pauseValue] CMTimeValue]];
+    [[[self player] currentItem] seekToTime:[[self pauseValue] CMTimeValue] completionHandler:^(BOOL finished){
+        if (finished) {
+            [[self player] play];
+        }
+        
+    }];
+
     [_tcVideoControlsView.playPauseButton fadeIn];
     [_tcVideoControlsView.skipButton fadeOut];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:[[self player] currentItem]];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:[[self player] currentItem]];
     
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [[self player] play];
-    });
+   
 }
 
 -(void) playMidRollAd {
