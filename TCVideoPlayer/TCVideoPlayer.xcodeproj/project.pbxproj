@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B794B9091BDBBA25003205BB /* TCXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B794B9081BDBBA25003205BB /* TCXMLParser.m */; settings = {ASSET_TAGS = (); }; };
-		B794B90F1BDBC539003205BB /* UIButton+UIButton_Fade.m in Sources */ = {isa = PBXBuildFile; fileRef = B794B90E1BDBC539003205BB /* UIButton+UIButton_Fade.m */; settings = {ASSET_TAGS = (); }; };
+		B794B90F1BDBC539003205BB /* UIButton+Fade.m in Sources */ = {isa = PBXBuildFile; fileRef = B794B90E1BDBC539003205BB /* UIButton+Fade.m */; settings = {ASSET_TAGS = (); }; };
 		B7A18AAF1BDB86DE006586B9 /* TCVideoPlayer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7A18AAE1BDB86DE006586B9 /* TCVideoPlayer.h */; };
 		B7A18AB11BDB86DE006586B9 /* TCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A18AB01BDB86DE006586B9 /* TCVideoPlayer.m */; };
 		B7A18ADD1BDB8B11006586B9 /* TCVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A18ADC1BDB8B11006586B9 /* TCVideoViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -45,8 +45,8 @@
 /* Begin PBXFileReference section */
 		B794B9071BDBBA25003205BB /* TCXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCXMLParser.h; sourceTree = "<group>"; };
 		B794B9081BDBBA25003205BB /* TCXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCXMLParser.m; sourceTree = "<group>"; };
-		B794B90D1BDBC539003205BB /* UIButton+UIButton_Fade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UIButton_Fade.h"; sourceTree = "<group>"; };
-		B794B90E1BDBC539003205BB /* UIButton+UIButton_Fade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UIButton_Fade.m"; sourceTree = "<group>"; };
+		B794B90D1BDBC539003205BB /* UIButton+Fade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Fade.h"; sourceTree = "<group>"; };
+		B794B90E1BDBC539003205BB /* UIButton+Fade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Fade.m"; sourceTree = "<group>"; };
 		B7A18AAB1BDB86DE006586B9 /* libTCVideoPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTCVideoPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A18AAE1BDB86DE006586B9 /* TCVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCVideoPlayer.h; sourceTree = "<group>"; };
 		B7A18AB01BDB86DE006586B9 /* TCVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCVideoPlayer.m; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 		B7E4EDF01BE3AE9D009834CD /* VideoControlsView */ = {
 			isa = PBXGroup;
 			children = (
-				B794B90D1BDBC539003205BB /* UIButton+UIButton_Fade.h */,
-				B794B90E1BDBC539003205BB /* UIButton+UIButton_Fade.m */,
+				B794B90D1BDBC539003205BB /* UIButton+Fade.h */,
+				B794B90E1BDBC539003205BB /* UIButton+Fade.m */,
 				B7A18B121BDBA5B0006586B9 /* TCVideoControlsView.h */,
 				B7A18B131BDBA5B0006586B9 /* TCVideoControlsView.m */,
 				B7E4EDEF1BE3ACCA009834CD /* TCVideoControlsDelegate.h */,
@@ -299,7 +299,7 @@
 				B7A18AFF1BDBA458006586B9 /* AFSecurityPolicy.m in Sources */,
 				B7A18AFD1BDBA458006586B9 /* AFHTTPSessionManager.m in Sources */,
 				B7A18B011BDBA458006586B9 /* AFURLRequestSerialization.m in Sources */,
-				B794B90F1BDBC539003205BB /* UIButton+UIButton_Fade.m in Sources */,
+				B794B90F1BDBC539003205BB /* UIButton+Fade.m in Sources */,
 				B7A18B031BDBA458006586B9 /* AFURLSessionManager.m in Sources */,
 				B7A18B141BDBA5B0006586B9 /* TCVideoControlsView.m in Sources */,
 				B7E4EDF51BE3AF8E009834CD /* RequestManager.m in Sources */,

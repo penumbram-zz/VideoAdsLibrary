@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (UIButton_Fade)
+@interface UIButton (Fade)
 
 -(void) fadeIn;
 -(void) fadeOut;

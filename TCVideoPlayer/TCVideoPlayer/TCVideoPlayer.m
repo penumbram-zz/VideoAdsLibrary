@@ -10,7 +10,7 @@
 #import "TCVideoViewController.h"
 #import "Constants.h"
 #import "TCXMLParser.h"
-#import "UIButton+UIButton_Fade.h"
+#import "UIButton+Fade.h"
 
 @interface TCVideoPlayer ()
 

@@ -7,7 +7,7 @@
 //
 
 #import "TCVideoViewController.h"
-#import "UIButton+UIButton_Fade.h"
+#import "UIButton+Fade.h"
 #import "Constants.h"
 
 @interface TCVideoViewController ()
@@ -110,14 +110,18 @@
 
 
 -(void) resumeContentVideo{
-    [_player replaceCurrentItemWithPlayerItem:[AVPlayerItem playerItemWithURL:[NSURL URLWithString:_videoURL]]];
-    [[_player currentItem] seekToTime:[_pauseValue CMTimeValue]];
+    [[self player] replaceCurrentItemWithPlayerItem:[AVPlayerItem playerItemWithURL:[NSURL URLWithString:_videoURL]]];
+    [[[self player] currentItem] seekToTime:[[self pauseValue] CMTimeValue]];
     [_tcVideoControlsView.playPauseButton fadeIn];
     [_tcVideoControlsView.skipButton fadeOut];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:[_player currentItem]];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:[_player currentItem]];
-    [_player play];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:[[self player] currentItem]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:[[self player] currentItem]];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [[self player] play];
+    });
 }
 
 -(void) playMidRollAd {

@@ -6,22 +6,22 @@
 //  Copyright © 2015 Tolga Caner. All rights reserved.
 //
 
-#import "UIButton+UIButton_Fade.h"
+#import "UIButton+Fade.h"
 
-@implementation UIButton (UIButton_Fade)
+@implementation UIButton (Fade)
 
 -(void) fadeIn  {
     [self setAlpha:0.0f];
     [self setEnabled:NO];
     [self setHidden:NO];
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{self.alpha = 1.0;} completion:^(BOOL finished){
+    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{self.alpha = 1.0;} completion:^(BOOL finished){
         [self setEnabled:YES];
     }];
 }
 
 -(void) fadeOut {
     [self setAlpha:1.0f];
-    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{self.alpha = 0.0;} completion:^(BOOL finished){
+    [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{self.alpha = 0.0;} completion:^(BOOL finished){
         [self setHidden:YES];
         [self setEnabled:NO];
     }];
